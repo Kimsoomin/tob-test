@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>주문/결제</title>
+<link rel="stylesheet" href="../css/common.css" type="text/css" />
+<style>
+.wrap {
+	width: 1200px;
+	height: 1800px;
+	border-width: 2px;
+	border: solid;
+	border-color: black;
+	clear: both;
+}
+
+
+.main {
+	width: 1200px;
+	height: 100px;
+}
+/* mouse over link */
+a:hover {
+	color: olive;
+}
+
+.h_1 li {
+	display: inline;
+}
+
+.h_1 a {
+	font-size: 30px;
+}
+.width_95p {
+	width: 95%
+}
+
+.txt_size_11 {
+	font-size: 11px;
+}
+
+.txt_size_13 {
+	font-size: 13px;
+}
+
+.txt_size_15 {
+	font-size: 15px;
+}
+
+.txt_size_25 {
+	font-size: 25px;
+}
+
+.height_100 {
+	height: 100px;
+}
+
+.txt_color_red{color:red;}
+
+.floating-box {
+	float: center;
+	width: 235px;
+	height: 80px;
+	margin: 10px;
+	border: 3px solid silver;
+}
+</style>
+</head>
+<body>
+
+	<div class="wrap auto">
+		<div class="main"></div>
+		<div>
+			<ul class="h_1">
+				<li><b><a href="#" target="_blank">1.장바구니</a></b></li>
+				<li>></li>
+				<li><b><a href="#" target="_blank">2.경품선택</a></b></li>
+				<li>></li>
+				<li><b><a href="#" target="_blank">3.주문/결제</a></b></li>
+				<li>></li>
+				<li><b><a href="#" target="_blank">4.주문완료</a></b></li>
+			</ul>
+			<p class="txt_size_13">
+				<b><font>　　</font>주문상품등록</b>
+			</p>
+
+			<table class="tex_center bg_color_white width_95p height_100  auto">
+				<tr>
+					<th><b>상품명</b></th>
+					<th><b>판매가</b></th>
+					<th><b>수량</b></th>
+					<th><b>합계</b></th>
+
+				</tr>
+				<tr>
+					<td><font>　</font>마션</td>
+					<td><font>　</font>13,500원 10%↓ p750원</td>
+					<td><font>　</font>1</td>
+					<td><font>　</font>13,500원</td>
+				</tr>
+				<tr>
+					<td><font>　</font>오베라는 남자</td>
+					<td><font>　</font>12,420원 10%↓ p690원</td>
+					<td><font>　</font>1</td>
+					<td><font>　</font>12,420원</td>
+
+				</tr>
+				<tr>
+					<td><font>　</font>나미야 잡화점의 기적(양장본 HardCover)</td>
+					<td><font>　</font>13,320원 10%↓ p7400원</td>
+					<td><font>　</font>1</td>
+					<td><font>　</font>13,320원</td>
+				</tr>
+			</table>
+			<hr class="width_95p" />
+			<p>
+				<span class="txt_size_15"><font>　　</font>상품변경을 원하시면
+				<font>　　　　　</font>총 1종 1권(개) <font>　　　　</font>예상 적립 통합 포인트 
+				<font>　　</font>총 상품금액 <font>
+				</font>+<font>　</font>배송비<font>　　　</font>=<font>　　　</font>총 주문금액</span>
+			</p>
+			<form>
+				<font>　　　　　</font>
+				<button type="button" onclick="alert('준비중입니다.')">장바구니로 가기</button>
+				<font>　　　　　　　　　　　　　　　　　　　　　　　　　　</font> <span class="txt_color_red txt_size_15">2,180원
+				<font>　　　　</font>39,240원<font>　</font> 0원
+				<font>　　　　　　　　</font>39,240원
+				</span>
+			</form>
+			<hr class="width_95p" />
+		</div>
+		<!-- 배송지 정보 -->
+		<p class="txt_size_13">
+			<b><font>　　</font>배송지정보</b>
+			
+		</p>
+		<div>
+			<table class="tex_left bg_color_white width_95p height_100  auto">
+				<tr>
+					<td><font>　</font><b>배송방법</b></td>
+					<td><form class="txt_size_13">
+							<input type="checkbox" name="vehicle1" value="PS"> [국내]
+							일반택배 <input type="checkbox" name="vehicle2" value="CS">
+							편의점 배송 <input type="checkbox" name="vehicle1"
+								value="oversea delivery"> 해외배송
+						</form></td>
+					<td rowspan="9"><font>　</font><b><span class="txt_size_25">주문자정보</span></b>
+						<hr class="width_95p" />
+						<p>
+							<font>　</font>이름<font>　　　</font>|<font>　</font><br /> 
+							<font>　</font>휴대폰<font>　　</font>|<font>　</font><br />
+						</p>
+						<form class="txt_size_13 tex_center">
+						<font>　　　　　　　　　</font>주문배송관련 SMS <br /> 
+						<font>　　　　　　　</font><input type="checkbox" name="vehicle1"
+								value="okay"> 수신동의 <input type="checkbox"
+								name="vehicle1" value="no">수신거절
+						</form> <br />
+						<p>
+							<font>　</font>전화번호<font>　</font>|<br /> 
+							<font>　</font>주소<font>　　　</font>|<font>　</font><br /> <br /> 
+							<font>　</font>이메일<font>　　</font>|<font>
+							</font><br /> <font>　</font>주문자정보는 로그인하신 아이디의 회원정보입니다. <br /> 
+							<font>　</font>회원정보 및 주문관련 외 한빛문고에서<br /> 
+							<font>　</font>발송하는 SMS수신여부는 마이룸에서<br />
+							<font>　</font>수정하실 수 있습니다.
+						</p></td>
+				</tr>
+				<tr>
+					<td><font>　</font><b>배송지</b></td>
+					<td><form class="txt_size_13">
+							<input type="checkbox" name="vehicle1" value="delivery">
+							최근 배송지 <input type="checkbox" name="vehicle1" value="address">주소록
+							<input type="checkbox" name="vehicle1" value="new">새로입력 <input
+								type="checkbox" name="vehicle1" value="equl">주문자와 동일
+						</form></td>
+
+				</tr>
+				<tr>
+					<td><font>　</font><b>이름</b></td>
+					<td><form class="txt_size_13">
+							<font>　</font><input type="text" name="name"><font>
+							</font>(10자 내외 입력)
+						</form></td>
+
+				</tr>
+				<tr>
+					<td><font>　</font><b>배송주소</b></td>
+					<td><form class="txt_size_13">
+							<font>　</font> <input type="text" name="one">―<input
+								type="text" name="two"><font>　</font>
+							<button type="button" onclick="alert('준비중입니다.')">우편번호 찾기</button>
+							<br /> <br /> <font>　</font><input type="text" name="addy"
+								size="50"> <input type="text" name="addi">
+						</form></td>
+				</tr>
+				<tr>
+					<td><font>　</font><b>휴대폰</b><br /> <font>　</font>(안심번호서비스)</td>
+					<td><form class="txt_size_13">
+							<font>　</font><select name="phon">
+								<option value="">010</option>
+								<option value="011">011</option>
+								<option value="016">016</option>
+								<option value="017">017</option>
+								<option value="018">018</option>
+								<option value="019">019</option>
+							</select>― <input type="text" name="three" size="10">―<input
+								type="text" name="fore" size="10"> <font>　</font>전화번호<font>
+							</font> <select name="sellphon">
+								<option value="">02</option>
+								<option value="031">031</option>
+								<option value="032">032</option>
+								<option value="033">033</option>
+								<option value="041">041</option>
+								<option value="042">042</option>
+								<option value="043">043</option>
+								<option value="044">044</option>
+								<option value="051">051</option>
+								<option value="052">052</option>
+								<option value="053">053</option>
+								<option value="054">054</option>
+								<option value="055">055</option>
+								<option value="061">061</option>
+								<option value="063">063</option>
+								<option value="064">064</option>
+							</select>― <input type="text" name="three" size="10">―<input
+								type="text" name="fore" size="10">
+						</form></td>
+				</tr>
+				<tr>
+					<td><font>　</font><b>도착예정일</b></td>
+					<td>
+						<p>
+							<font>　</font>도착예정일이 토요일인 경우 주 5일제로 인해 회사 사무실로 배송이 어려우니,<br /> 
+							<font>　</font>자택 등 안정적으로 수취가 가능한 배송지를 입력해주세요. <br /> <font>　</font>온라인송금 주문 시,
+							결제완료 시간 기준으로 도착예정일이 변경될 수 있습니다. <br /> <font>　</font>예약판매상품(출간예정도서)을
+							다른 상품과 같이 주문하실 경우 배송일이 늦어질 수 있으니,<br /> <font>　</font>먼저 받고자 하시는
+							상품이 있으시면 예약판매 상품과 별도로 주문하세요. <br />
+						</p>
+						<p>
+							<font>　</font><b> < 당일배송 예외사항 ></b> <br /> <font>　</font>수도권 외
+							지역에서 경품을 수령할 경우 <br /> <font>　</font>서울 및 수도권 지역에서 10~11시에 2권(개)
+							이상 주문할 경우(경품포함 수량) <br /> <font>　</font>회사에서 수령할 경우(퇴근시간 이후 도착할
+							수 있음) / 도로명주소 사용시<br /> <font>　</font>수도권 외 지역에서 선물포장하기 주문을 할 경우
+						</p>
+					</td>
+				</tr>
+				<tr>
+					<td><font>　</font><b>영수증</b></td>
+					<td><form class="txt_size_13">
+							<font>　</font><input type="checkbox" name="vehicle1" value="common">
+							일반영수증(상품금액표시) <input type="checkbox" name="vehicle2" value="mul">
+							물용 영수증(상품금액표시안함)
+						</form></td>
+				</tr>
+				<tr>
+					<td><font>　</font><b>전달메세지</b></td>
+					<td><form class="txt_size_13" method="get" target="_blank">
+							<font>　</font> <input type="text" name="mes" size="75"
+								placeholder="받는분께 전달하실 내용을 입력하세요.(거래명세서에 출력)">
+						</form></td>
+				</tr>
+				<tr>
+					<td><font>　</font><b>택배기사 메세지</b></td>
+					<td><form class="txt_size_13" method="get" target="_blank">
+							<font>　</font> <input type="text" name="taxme" size="75"
+								placeholder="택배기사님께 전할 말씀 및 유의사항">
+						</form></td>
+				</tr>
+			</table>
+		</div>
+		<!-- ===================== 할인/적립정보 ============== -->
+		<div>
+		<p class="txt_size_13">
+			<b><font>　　</font>할인/적립 정보</b>
+		</p>
+		<table class="tex_left bg_color_white width_95p height_100  auto">
+			<tr>
+				<td><font>　</font><b>할인</b></td>
+				<td><form class="txt_size_13">
+						<font>　</font>할인쿠폰
+						<font>　　</font> <input type="text" name="taxme"
+							size="35" placeholder="0"> 원<font>　</font>
+						<button type="button" onclick="alert('준비중입니다.')">쿠폰적용</button>
+					</form>
+			</tr>
+			<tr>
+				<td rowspan="5"><font>　</font><b>나의 통장</b></td>
+				<td><form class="txt_size_13">
+						<font>　</font>통장포인트
+						<font>　</font> <input type="text" name="taxme"
+							size="35" placeholder="0"> 원<font>　</font>|
+						<font>　　　　　　</font><span class="txt_color_red">0</span>원<font>　</font>| 
+						<font>　</font><input type="checkbox" name="vehicle1" value="all">모두사용
+						<font>　</font>|<font>　　</font>소멸예정 <font>　　　</font><span class="txt_color_red">0</span>원
+					</form></td>
+
+			</tr>
+			<tr>
+				<td><form class="txt_size_13">
+						<font>　</font>마일리지<font>　　</font> <input type="text" name="taxme"
+							size="35" placeholder="0"> 원<font>　</font>|
+							<font>　　　　　　</font><span class="txt_color_red">0</span>원<font>　</font>| 
+						<font>　</font><input type="checkbox" name="vehicle1" value="all">모두사용
+						<font>　</font>|<font>　　</font>소멸예정 <font>　　　</font><span class="txt_color_red">0</span>원
+					</form></td>
+
+			</tr>
+			<tr>
+				<td><form class="txt_size_13">
+						<font>　</font>예치금<font>　　　</font> <input type="text" name="taxme"
+							size="35" placeholder="0"> 원<font>　</font>|
+					<font>　　　　　　</font><span class="txt_color_red">0</span>원<font>　</font>|
+					<font>　</font><input type="checkbox" name="vehicle1" value="all">모두사용
+					</form></td>
+
+			</tr>
+			<tr>
+				<td><form class="txt_size_13">
+						<font>　</font>교보캐시<font>　　</font> <input type="text" name="taxme"
+							size="35" placeholder="0"> 원<font>　</font>|
+							<font>　　　　　　</font><span class="txt_color_red">0</span>원<font>　</font>|
+							 <font>　</font><input type="checkbox" name="vehicle1" value="all">모두사용
+							 <font>　</font>|<font>　　</font>소멸예정
+							 <font>　　　</font><span class="txt_color_red">0</span>원
+						<font>　　　</font>
+						<button type="button" onclick="alert('준비중입니다.')">교보캐시충전</button>
+					</form></td>
+
+			</tr>
+			<tr>
+				<td><form class="txt_size_13">
+						<font>　</font>교환권<font>　　　</font> <input type="text" name="taxme"
+							size="35" placeholder="0"> 원<font>　</font>
+						<button type="button" onclick="alert('준비중입니다.')">교환권선택</button>
+					</form></td>
+
+			</tr>
+			<tr>
+				<td rowspan="3"><font>　</font><b>제휴수단<br /> <font>
+					</font>사용/적립
+				</b></td>
+				<td><form class="txt_size_13">
+						<font>　</font> <input type="checkbox" name="vehicle1"
+							value="draam"> 드림카드 <input type="checkbox"
+							name="vehicle2" value="plii"> GS&POINT <input
+							type="checkbox" name="vehicle2" value="ok"> OK캐쉬백
+							<font>　　　　　　　　　　　　　　　　　　　　　　　　　　　　　</font> <input type="text" name="taxme" size="15" placeholder="0">원 사용
+					</form></td>
+
+			</tr>
+			<tr>
+				<td><form class="txt_size_13">
+						<font>　</font> <input type="checkbox" name="vehicle1" value="put">
+						GS&POINT 적립 <input type="checkbox" name="vehicle2" value="ubt">
+						OK캐쉬백 적립
+						<font>　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　</font>	<button type="button" onclick="alert('준비중입니다.')">적립취소</button>
+
+					</form></td>
+
+			</tr>
+			<tr>
+				<td><form class="txt_size_13">
+						<font>　</font> 북앤라이프 도서상품권, 해피머니 상품권(교보캐시로 전환 후 사용가능) 
+						<font>　　　　　　</font><button type="button" onclick="alert('준비중입니다.')">교보캐시 충전</button>
+					</form></td>
+
+			</tr>
+		</table>
+		</div>
+		<div>
+		<!-- ===================== 결재정보 ============== -->
+		<p class="txt_size_13">
+			<b><font>　　</font>결재정보</b>
+		</p>
+		<table class="tex_left bg_color_white width_95p height_100  auto">
+			<tr>
+				<td rowspan="3" class="tex_center"><font>　</font><b>결제 수단선택</b></td>
+				<td><form class="txt_size_13">
+						<input type="checkbox" name="vehicle1" value="sin">
+						신용카드(일반) <input type="checkbox" name="vehicle2" value="zehu">
+						제휴신용카드 <input type="checkbox" name="vehicle2" value="haw">
+						해외발급신용카드<br /> <input type="checkbox" name="vehicle1"
+							value="kakao"> 카카오페이(간편결제) <input type="checkbox"
+							name="vehicle2" value="paynaw"> 페이나우(간편결제) <br /> <input
+							type="checkbox" name="vehicle1" value="realtime"> 실시간
+						계좌이체 <input type="checkbox" name="vehicle2" value="online">
+						온라인(무통장)송금 <br /> <input type="checkbox" name="vehicle1"
+							value="phon"> 휴대폰결제 <input type="checkbox"
+							name="vehicle2" value="mobil"> 모바일티머니
+					</form></td>
+				<td rowspan="5"><font>　</font>주문상품<font>　　</font>|
+				<font>　</font>총 3종 3권(개)<br /> <font>　</font>총 상품금액<font>　</font>|<font>　</font>39,240<br />
+					<font>　</font>배송비<font>　　　</font>|<font>　　</font>0원<br /> 
+					<font>　</font>할인금액<font>　　</font>|<font>　　</font>-0원 <br />
+
+					<hr class="width_95p" /> 
+					<font>　　　　　　　　　</font><b>최종 결제금액</b><br /> 
+					<font>　　　　　　　　　</font><span class="txt_size_25 txt_color_red"><b>39,240</b></span>원 <br />
+					<div class="floating-box">
+						<font>　</font><b>주문동의</b>|<font>　</font>주문할 상품의 상품명, 가격<br /> <font>　</font>배송
+						정보에 동의 하십니까?<br />
+						<form class="txt_size_11">
+							<font>　</font><input type="checkbox" name="vehicle1" value="sin">
+							동의합니다(전자상거래법 제8조2항)
+						</form>
+					</div>
+					<form class="txt_size_13 tex_center">
+						<font>　</font>
+						<button type="button" onclick="alert('준비중입니다.')">결제하기</button>
+						<br />
+						<br /> <font>　</font>
+						<button type="button" onclick="alert('준비중입니다.')">장바구니 가기</button>
+					</form></td>
+			</tr>
+			<tr>
+				<td><font>　</font>카드선택<font>　</font> <select name="card">
+						<option value="">결제하실 카드를 선택해주세요.</option>
+						<option value="1">롯데카드</option>
+						<option value="2">신한카드</option>
+						<option value="3">국민카드</option>
+						<option value="4">삼성카드</option>
+						<option value="5">씨티카드</option>
+						<option value="6">BC/우리카드</option>
+						<option value="7">NH카드</option>
+						<option value="8">현대카드</option>
+						<option value="9">외환카드</option>
+						<option value="10">하나SK카드</option>
+						<option value="11">전북JB카드</option>
+						<option value="12">광주은행</option>
+						<option value="13">제주은행</option>
+						<option value="14">수협카드</option>
+						<option value="15">산업은행카드</option>
+						<option value="16">문화누리카드</option>
+						<option value="17">기타</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td>
+				<form class="txt_size_13">
+						<font>　</font>카드구분<font>　</font> <input type="checkbox" name="vehicle1"
+							value="per"> 개인카드<font>　</font> <input type="checkbox"
+							name="vehicle2" value="corporate"> 법인카드
+					</form></td>
+			</tr>
+			<tr>
+				<td rowspan="2"><font>　</font><b>결제/이벤트 안내</b></td>
+				<td><font>　</font>신용카드 결제시, Active X 수동설치 및 오류안내<br /> 
+				<font>　</font>실시간 계좌이체 결제 시, 플러그인 수동설치 및 오류안내<br /> <font>　</font>기타 결제 오류안내</td>
+			</tr>
+			<tr>
+				<td><font>　</font>
+				<button type="button" onclick="alert('준비중입니다.')">event</button> <font>
+				</font>
+				<button type="button" onclick="alert('준비중입니다.')">LOTTE</button> <font>
+				</font>
+				<button type="button" onclick="alert('준비중입니다.')">KB</button> <font>
+				</font>
+				<button type="button" onclick="alert('준비중입니다.')">SINHAN</button> <font>
+				</font>
+				<button type="button" onclick="alert('준비중입니다.')">BC</button></td>
+			</tr>
+		</table>
+			</div>
+</div>
+</body>
+</html>

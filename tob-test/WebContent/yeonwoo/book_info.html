@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/common.css" type="text/css" />
+<style>
+.wrap{
+width: 1200px;
+height: 3200px;
+border: 1px solid black;
+}
+div.buy{
+width: 700px;
+border: 1px solid black;
+}
+
+div.rel{
+position: relative;   
+top : 200px;
+left : 0;
+width : 200px;
+height: 100px;
+}
+
+div.header{
+width: 1200px;
+height: 100px;
+border: 1px solid black;
+}
+
+div.buttoncell{
+width: 1200px;
+height: 120px;
+border: 1px solid red;
+}
+div.button{
+width: 200px;
+height: 60px;
+}
+
+div.contents{
+width: 1200px;
+height: 500px;
+border: 1px solid black;
+}
+div.contents2{
+width: 1200px;
+height: 400px;
+border: 1px solid black;
+}
+
+
+div.book{
+margin:23px;
+float: left;
+width: 400px;
+height: 500px;
+}
+.book2{
+float: left;
+width: 720px;
+height: 500px;
+border: 1px solid black;
+}
+div.book3{
+width: 720px;
+height: 250px;
+border: 1px solid black;
+}
+div.add{
+width: 250px;
+height: 200px;
+}
+
+div.add2{
+width:  1200px;
+height: 20px;
+
+}
+font.blue{
+background: #7B68EE;
+}
+font.white{
+background: white;
+}
+font.red{
+background: red;
+}
+
+font.orange{
+background: orange;
+}
+input.skyblue{
+background: #87CEEB;
+}
+input.orange{
+background: orange;
+}
+
+input.limegreen{
+background: #32CD32;
+}
+font.limegreen{
+background: #32CD32;
+}
+input.maroon{
+background: maroon;
+}
+font.maroon{
+background: maroon;
+}
+
+</style>
+</head>
+<body>
+<div class="wrap auto">
+	<div class="header">
+	</div>
+	<div class="contents">
+		<div class="book">
+			<img src="in_book1.PNG" width="250px" height="353px"  /> <!-- 이미지 -->
+		</div>
+		<div class="book2">  <!--책 정보  -->
+			<font color="white" class="blue"><strong>오늘의 책</strong></font>
+			<font color="black" class="white" ><strong>이벤트</strong></font>
+			<font color="white" class="red" >무료배송</font>
+			<font color="white" class="orange" >경품</font>
+			<font color="white" class="limegreen" >베스트셀러</font>
+			<font color="white" class="maroon" >개굳</font>
+			<br />
+			<br />
+			<p>
+			<font color="#00BFFF" size="20px"><strong>　마션</strong></font><font>　</font><font color="black" size="2px"><strong> 어느 괴짜 과학자의 화성판 어드벤처 생존기 | 앤디 위어 장편소설</strong></font><br /><br />
+			<font>　　　　　　　　　　　　　</font> <font color="gray" size="2px">엔디위어 지음 ㅣ  박아람 옮김  ㅣ  알에이치코리아   ㅣ  2015.07.31 출간</font><br />
+			<font>　　　　　　　　　　　　　</font><font color="#DC143C" size="3px">★★★★★</font><font>　</font><font>리뷰 19개 <font>　　　　　　</font> <input type="button" onclick="다음페이지로." value="리뷰쓰기"  > </font><br />
+			<font>　　　　　　　　　　　　　</font><font color="gray" size="2px">국내도서 주간 베스트</font><font color="red">6</font><font color="gray">위 ㅣ</font><font color="gray">소설 주간 베스트</font><font color="red">1</font><font color="gray">　위</font><font>　　</font><select name="test"><option>주요 일간지 북섹션 추천도서</select>
+			<br /><br /><br /><br /><br /><br /><br /><br />
+			<font>　　　　　　　</font><font color="black" size="3px" >정가 : </font><font color="black"><s>15,000</s></font>  <br />
+			<font>　　　　　　　</font><font color="black" size="3px">판매가 :</font> <font color="red" size="7pk"><strong> 13,500원</strong></font><font color="purple" size="3px"><strong>[10%↓ 1,500원 할인]</strong></font><br />
+			<font>　　　　　　　</font><font color="black">제휴할인가 :</font> <font color="skyblue" size="3px"><strong><12,820원</strong></font><font color="black">교보-KB국민카드 5% 청구할인(실적무관)</font><font>　　</font><input type="button" onclick="다음 페이지로.." value="카드/포인트 안내"><br />
+			<font>　　　　　　　</font><font color="black">통합포인트 :</font><font color="black"><strong>10원 이상</strong></font><font color="black">사용가능</font> <input type="button" onclick="다음페이지로.." value="안내"/> <br />
+			<br />
+		</div>
+	</div>  <!-- 공백 -->
+
+	<div class="buttoncell">  <!-- 버튼 -->
+		<input type="button" class="skyblue" style="font-size :25px;color: white;font-style: oblique;"  value=" 장바구니에 담기"  onclick="location.href='../hyesuk/cart.html'"/><font>　</font>
+		<input type="button" class="orange" style="font-size :25px;color: white;font-style: !important;"  value=" 바로구매" onclick="location.href='../hyesuk/order.html'" /><font>　</font>
+		<input type="button" class="limegreen" style="font-size :25px;color: white;font-style: normal;"  value=" 보관함 담기."  /><font>　　　</font>
+		<input type="button" class="maroon" style="font-size :25px;color: white;font-style: italic;"  value=" 추천하기."  />
+	</div>  
+
+
+	<div class="contents"> <!-- 내용1 -->
+
+		<font size="4px;" style="font-style: italic;" ><strong> 책 소개 및 줄거리 </strong></font>
+		<p>
+		인생 최고의 시간이 될 줄 알았던 한 달이 겨우 엿새 만에 악몽으로 바뀌어버렸다! <p>
+		
+		리들리 스콧 감독, 맷 데이먼 주연의 영화 《마션》의 원작소설이다. 수많은 작가들에게 상상력의 원천이자 영감이 되어왔던 미지의 행성 ‘화성’. 15세에 미국 국립연구소에서 일하기 시작해 ‘천재 작가’<p>
+		라는 수식어가 따라 붙는 앤디 위어는  데뷔작인 이 소설에서 궤도 역학, 화성의 물리적 환경, 우주비행의 역사, 식물학 등 박학다식한 과학적 지식을 바탕으로 험준한 지형이 펼쳐진 불모의 황무지 ‘화성’에 <p>
+		 고립된 한 남자, 마크 와트니가 수많은 위험에 맞서 벌이는 생존을 위한 여정을 그려 보인다.  식물학자이자 기계공학자인 우주비행사 마크 와트니는 화성 탐사의 세 번째 계획인 아레스 3 탐사에 참여해 동료들과 <p>
+		  함께 화성 표면에 성공적으로 착륙한 후 막사를 짓고 본격적으로 탐사에 나선다. 하지만 단 엿새 만에 예기치 못한 모래 폭풍이 휘몰아치면서 임무는 중단되고 궤도로 복귀하라는 항공우주국의 지시가 떨어진다.  <p>
+		  폭풍 속도가 화성 상승선의 한계를 벗어나리라는 예측이 나오는 가운데 우주비행사들은 서둘러 복귀에 나선다. 하지만 뜻밖의 사건과 맞닥뜨린 마크 와트니는 죽음의 위기를 겪고 홀로 고립된다.  <p>
+		마크의 생체 신호가 멈춘 것을 확인한 동료들이 그가 죽었다고 생각하고 화성 표면을 떠나고, 마크는 어딘가로 떠날 수도, 지구에 구조 요청을 할 수도 없다. 하지만 삶을 포기할 수 없는  <p>
+		그는 과학자 고유의 감각으로 굶어 죽지 않기 위해 식량을 키우고, 구조 요청을 하기 위해 지구와의 교신을 시도한다. 수많은 위험이 도사리고 있지만, 긍정적 사고와 유머 감각을 타고난 그의 끈질긴 모험은 계속된다. <p>
+		북소믈리에 한마디! <p>
+		과학적으로 정확하고 실현 가능한 우주 여정을 펼치는 이 작품은 막사라는 한정된 공간에서 산소 발생기, 동력 추진기, 물, 음식, 통신, 탐사 등 주인공 마크가 많은 문제들을 극복해가는 과정을 생생하게  <p>
+		그려 보이며 읽는 내내 우주 장비 없이 화성 땅에 선 것 같은 경험을 하게 한다. <p>
+</div>   
+
+<div class="contents"> <!-- 유튜브 -->
+<br />
+<font size="6px;" style="font-style: italic;" ><strong> 관련 동영상 </strong></font>
+<br />
+<iframe width="560" height="315" src="https://www.youtube.com/embed/O87okl1Cycc" frameborder="0" allowfullscreen></iframe>
+<br />
+<p>
+* 출판사의 사정에 따라 서비스가 변경 또는 중지될 수 있습니다.  <p>
+* window7의 경우 사운드 연결이 없을시, 동영상 재생에 오류가 발생할 수 있습니다. <p>
+이어폰, 스피커 등이 연결되어 있는지 확인 하시고 재생하시기 바랍니다.<p>
+</div>    
+
+<div class="contents"> <!-- 저자소개 -->
+<font size="4px;" style="font-style: italic;" ><strong> 저자소개 </strong></font>
+<div class="add2">
+<font><strong>저자:앤디 위어</strong></font><font>　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　</font> <input type="button" onclick="다음페이지로.." value="작가 자세히 보기." /><font>　　　　　　　　</font><input type="button" onclick="다음페이지로.." value="관심작가 등록"/>
+</div>
+<br />
+<font color="gray"><strong> 저자가 속한 분야 </strong> </font> <br />
+<font color="gray"><strong> 문학가 > 현대소설가＞영미작가 </strong> </font> <br />
+<p>
+저자 앤디 위어 Andy Weir는 1972년 미국 캘리포니아에서 태어났다. 입자물리학자인 아버지와 전기기술자인 어머니 슬하에서 자랐으며, 여덟 살 때부터 아서 C.<p>
+ 클라크, 아이작 아시모프 등의 작품을 탐독했다. 캘리포니아 대학교에서 컴퓨터공학을 공부하다가, 열다섯 살 때 산디아 국립연구소에서 컴퓨터 프로그래머로 일하기 시작했다.<p>
+  이후 블리자드에서 ‘워크래프트 2’ 개발에 참여했고, AOL 등 몇몇 소프트웨어 회사들을 전전하며 프로그래머로 일했다.<p>
+ 본격적으로 소설을 집필하기 시작한 건 20대에 들어서면서부터다. 수년간 웹사이트를 운영하며 자신이 쓴 글을 포스팅해왔는데, 단편 등도 인터넷상에서 좋은 반응을 얻어 유투브 동영상, 단막극 등으로 만들어졌다.<p>
+  2009년 첫 장편 《마션》을 개인 블로그에 연재하다가,<p>
+  2011년 독자들의 요청으로 전자책 자비 출판을 했고, 2014년 크라운 출판사와 판권 계약을 맺고 정식 출간하였다. 데뷔작 《마션》의 출간 성공으로 한참 인기 작가로서의 명성을 누리고 있는 앤디 위어는 현재v
+   외계인, 텔레파시, 시간여행 등을 소재로 한 차기작 《Zhek》을 집필 중이다.<p>
+<p>
+<br />
+</div>   
+
+<div class="contents2"> <!-- 추천사 -->
+
+<font size="5px"><strong> 추천사 </strong></font> <p>
+월스트리트 저널 <p>
+“대단하다! 인류의 과학기술에 대한 찬미로 읽힐 정도로 매혹적이다!” <p>
+퍼블리셔스 위클리 <p>
+“현대 과학기술에 대한 정확하고 상세한 묘사와 독창적인 이야기 전개가 빛을 발하는 작품.” <p>
+USA투데이 <p>
+“빼어난 소재, 무엇보다도 실화보다 더 사실적인 이야기에 놀라움을 금할 수 없다.” <p>
+산호세 머큐리 뉴스 <p>
+“로버트 하인라인, 아이작 아시모프, 아서 C. 클라크의 계보를 잇는 매혹적인 화성판 생존기.” <p>
+라이브러리 저널 <p>
+“생사를 넘나드는 화성에서의 급박한 상황과, 예리하면서도 재기 넘치는 괴짜 과학자의 유머러스한 화법이 완벽한 조화를 이룬 작품.” <p>
+<br />
+
+</div>   
+
+
+<div class="contents2">  <!-- 다른책 추천 -->
+<font size="5px"><strong> 다른 추천 도서</strong></font> <p>
+<img src="in_book2.PNG" width="250px" height="362px"/> <font>　　　</font>
+<img src="in_book3.PNG" width="250px" height="367px"/><font>　　　</font>
+<img src="ex1.PNG" width="250px" height="367px"/><font>　　　</font>
+<img src="ex2.PNG" width="250px" height="367px"/>
+
+
+
+</div>  
+</div>
+</body>
+</html>

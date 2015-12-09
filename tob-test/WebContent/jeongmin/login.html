@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../css/common.css" />
+<style>
+.wrap{
+      width : 1200px; height : 900px;
+      border : 1px solid black;
+      clear : both;
+}
+.auto{margin :auto;}
+.header{
+      background-color: #F2FF92;
+      color : #FFFFDE;
+      text-align: center;
+      padding: 15px;
+      border: 1px solid black;
+}
+a.highlight:hover {
+    color: #3162C7;
+}
+a.highlight{
+      color:black;
+}
+.width_150{width :150px}
+.float_r{float:right;}
+.list_style_none{list-style-type : none;}
+.log{
+	background-color:  white;
+	width: 60%;
+	height: 200px;
+	margin: 20px;
+	position: left_50;
+    left: 50px;
+    border: 3px solid #B2CCFF;
+    margin-left: 200px;
+    margin-right: 200px
+}
+.logv{
+	font-size: 16px;
+	font-weight: bold;
+	padding-left: 20px;
+	padding-top: 10;
+	width: 50%;
+}
+.logm{
+	font-size: 16px;
+	font-weight: bold;
+	padding-left: 20px;
+	padding-top: 10px;
+}
+.pad_left_20{padding-left: 20px;}
+.pad_right_20{padding-right: 20px;}
+.txt_color_blue{color: blue;}
+.hadan{
+	background-color: white;
+	width: 60%;
+	height: 170px;
+	margin-top: 40px;
+	margin-left: 200px;
+	margin-right: 200px;
+	border: 3px solid #B2CCFF;
+}
+.login{
+	font-size: 30px;
+	font-weight: bold;
+}
+</style>
+</head>
+<body>
+<div class="wrap auto">
+	<div class="header"> </div>
+			<ul>
+				<li class ="list_style_none">  홈 > 로그인 </li>
+			</ul> <hr />
+			<ul>
+				<li class ="login list_style_none"> 로그인 </li>
+     		 </ul > <hr />
+				<table class="log">
+					<tr>
+						<td class="logv"> 회원 로그인 </td>
+						<td class="logm"> 관리자 로그인 </td>
+					</tr>
+					<tr>
+						<td class="pad_left_20">
+							<form action ="../moond.html">
+                         		<br ><span class ="txt_color_blue"> 사용자ID</span> : <input type= "text" name ="userid"  placeholder= "아이디를 입력하세요" required > <br >
+                            	<span class ="txt_color_blue"> 비밀번호 </span>   : <input type= "password" name ="psw"  placeholder= "비밀번호를 입력하세요" >
+                            	<input type ="submit" formtarget= "_blank" value ="로그인">
+
+                         		<p >아이디와 비밀번호는 대/소문자를 구별하여 입력하세요.</p>
+
+                        		<input type ="submit" formtarget="_blank" value= "아이디 찾기" href="http://www.naver.com">
+                         		<input type ="submit" formtarget="_blank" value= "비밀번호 찾기" >
+                         		<input type ="button" formtarget="_blank" value= "회원가입" onclick="location.href='../hyeongdong/join.html'";>
+
+                         		<p >각 SNS 아이콘을 클릭하여 동시 로그인 하세요.</p>
+
+                         		<input type ="image" src="kakao.jpg" alt= "Submit" width ="48" height="48"> Kakao
+
+                         		<input type ="image" src="facebook.jpg" alt= "Submit" width ="48" height="48"> Facebook
+                  			</form >
+						</td>
+						 <td class ="pad_left_20 pad_right_20">
+                  			 <form action ="../index.html">
+                         		<br ><span class ="txt_color_blue"> 관리자ID</span> : <input type= "text" name ="userid" placeholder="아이디를 입력하세요" required> <br>
+                           	  		<span class ="txt_color_blue"> 비밀번호</span> : <input type= "password" name ="psw" placeholder= "비밀번호를 입력하세요" >
+                              		<input type ="button" value="로그인" onclick="location.href='../soomin/manager_main.html'";>
+                              		<p >아이디와 비밀번호는 대/소문자를 구별하여 입력하세요.</p>
+                         	  		<ul >
+                         	  			<li > 아이디와 비밀번호는 대/소문자를 구별하여 입력하세요. </li>
+                         	  			<li >교보문고 회원 로그인 시, 모든 SNS 계정에도 로그인 할 수 있습니다.</li>
+                         	  			<li >첫 로그인 할 때만 자주 쓰는 여러 SNS 계정을 설정하면 다음 접속부터
+                     			   			회원이 아니어도 SNS를 통해 댓글을 남길 수 있습니다.</li>
+                     				</ul >
+                   </form >
+                   		</td >
+					</tr>
+				</table>
+	<div class="hadan">
+		<p style="font-size: 11px">회사소개 이용약관 개인정보취급방침 출판사여러분 제휴·도서홍보 광고센터 채용정보서비스 전체보기 </p>
+		<p style="font-size: 11px">㈜ 교보문고<br>
+			대표이사  ㅇㅇㅇ   주소 : 우편번호 03154 서울시 강남구 강남1   사업자등록번호 : 123-45-67890<br>
+			서울특별시 통신판매업신고번호 : 제 653호 ▶사업자정보확인   개인정보보호최고책임자 : ㅇㅇㅇ aaaa@kyobobook.co.kr<br>
+			대표전화 : 1234-5678 (발신자 부담전화)   팩스 : 0234-456-7890 (지역번호공통)<br>
+			COPYRIGHT(C) KYOBO BOOK CENTRE ALL RIGHTS RESERVED.<br><br>
+			LG U+ 구매안전서비스 : 고객님은 안전거래를 위해 현금 등으로 결제시 <br>
+			저희 쇼핑몰에서 가입한 LG유플러스의 구매안전서비스를 이용하실 수 있습니다. 서비스 가입 확인</p>
+			</div>
+</div>
+</body>
+</html>

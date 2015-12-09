@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>장바구니</title>
+<link rel="stylesheet" href="../css/common.css" type="text/css"/>
+<style>
+
+.float_right{
+	float: right;
+}
+
+.float_left{
+	float: left;
+}
+.wrap{
+	width : 1200px; height :900px;
+	border-width :2px;
+	border: solid;
+	border-color: black;
+	clear: both;
+}
+
+.main{
+	width : 1200px; height: 100px;
+}
+
+/* mouse over link */
+a:hover {
+    color: olive;
+}
+
+.h_1 li, .h_2 li {display: inline;}
+.h_1 a {
+	font-size: 30px;
+} 
+.h_2 li { font-size: 20px }
+.h_2::before{
+    content: url("tackba.jpg");
+    }
+   .height_100
+{height: 100px;}
+.width_95p{
+width: 95%}
+.bg_color_silver{
+background:silver;}
+
+.floating-box {
+    float: left;
+    width: 568px;
+    height: 210px;
+    margin: 10px;
+    border: 3px solid silver;  
+}
+.txt_color_red{color:red;}
+
+</style>
+</head>
+<body>
+<div class="wrap auto">
+		<div class="main"></div>
+		<div>
+			<ul class="h_1">
+				<li><b><a href="#" target="_blank">1.장바구니</a></b></li>
+				<li>></li>
+				<li><b><a href="#" target="_blank">2.경품선택</a></b></li>
+				<li>></li>
+				<li><b><a href="#" target="_blank">3.주문/결제</a></b></li>
+				<li>></li>
+				<li><b><a href="#" target="_blank">4.주문완료</a></b></li>
+			</ul>
+			<p>
+				<font>　</font>로그인 후 장바구니에 담긴 상품은 <span class="txt_color_red">
+					<b>30일간 보관됩니다.</b>
+				</span> 30일이 지난 도서는 자동으로 장바구니에서 삭제되오니 영구보관을 원하시면 보관함에 담아 보관하세요. <br /> 
+				<font>　</font>(단 비로그인 시 2일간 저장 후 자동삭제)
+			</p>
+			<ul class="h_2">
+				<li><b>일반배송상품</b></li>
+				<li><b>|</b></li>
+				<li><b>영업점 바로드림</b></li>
+			</ul>
+			<hr class="width_95p" />
+		</div>
+		<div>
+		<table class="tex_center bg_color_white width_95p height_100 auto">
+			<tr>
+				<th><b>상품명</b></th>
+				<th><b>도착예정일</b></th>
+				<th><b>판매가</b></th>
+				<th><b>수량</b></th>
+				<th><b>합계</b></th>
+				<th>
+					<form>
+						<input type="radio">
+					</form>
+				</th>
+				<th>
+					<form>
+						<input type="submit" value="보관함담기"> <input type="submit"
+							value="삭제">
+					</form>
+				</th>
+			</tr>
+			<tr>
+				<td><form>
+						<span class="float_left"><font>　</font>마션</span>
+						<button type="button" onclick="alert('준비중입니다.')"
+							class="float_right">새창보기</button><font>　</font>
+					</form></td>
+				<td><font>　</font>1일 이내 발송예정</td>
+				<td><font>　</font>13,500원 10%↓ p750원</td>
+				<td><font>　</font>1</td>
+				<td><font>　</font>13,500원</td>
+				<td><form>
+						<input type="radio">
+					</form></td>
+				<td><form>
+						<font>　　</font><button type="button" onclick="alert('준비중입니다.')">보관함담기</button>
+						<font>　　</font><button type="button" onclick="alert('준비중입니다.')">삭제하기</button>
+					</form></td>
+			</tr>
+			<tr>
+				<td><form>
+						<span class="float_left"><font>　</font>오베라는 남자</span>
+						<button type="button" onclick="alert('준비중입니다.')"
+							class="float_right">새창보기</button><font>　</font>
+					</form></td>
+				<td><font>　</font>1일 이내 발송예정</td>
+				<td><font>　</font>12,420원 10%↓ p690원</td>
+				<td><font>　</font>1</td>
+				<td><font>　</font>12,420원</td>
+				<td><form>
+						<input type="radio">
+					</form></td>
+				<td><form>
+				<font>　　</font><button type="button" onclick="alert('준비중입니다.')">보관함담기</button>
+				<font>　　</font><button type="button" onclick="alert('준비중입니다.')">삭제하기</button>
+					</form></td>
+			</tr>
+			<tr>
+				<td><form>
+						<span class="float_left"><font>　</font>나미야 잡화점의 기적(양장본
+							HardCover) </span>
+						<button type="button" onclick="alert('준비중입니다.')"
+							class="float_right">새창보기</button><font>　</font>
+					</form></td>
+				<td><font>　</font>1일 이내 발송예정</td>
+				<td><font>　</font>13,320원 10%↓ p7400원</td>
+				<td><font>　</font>1</td>
+				<td><font>　</font>13,320원</td>
+				<td><form>
+						<input type="radio">
+					</form></td>
+				<td><form>
+					<font>　　</font><button type="button" onclick="alert('준비중입니다.')">보관함담기</button>
+					<font>　　</font><button type="button" onclick="alert('준비중입니다.')">삭제하기</button>
+					</form></td>
+			</tr>
+		</table>
+	</div>
+	<div class="auto">
+		<div class="floating-box">
+			<p>
+				<b><font>　</font>도착예정일 : 1일 이내 발송예정</b> <font>　</font>
+				<button type="button" onclick="alert('준비중입니다.')">도착예정일 안내</button>
+			</p>
+			<p>
+				<font>　</font>(집 주소와 가까운 곳 기준 95%) <font>　</font>
+				<button type="button" onclick="alert('준비중입니다.')">지역변경</button>
+			</p>
+
+			<hr />
+
+			<p>
+				<b> <font>　</font>당일배송 예외사항
+				</b><br /> <font>　</font>· 수도권 외 지역에서 경품을 수령할 경우<br /> 
+				<font>　</font>·	서울 및 수도권 지역에서 10~11시에 2권(개) 이상 주문할 경우(경품포함 수량) <br />
+				<font>　</font>· 회사에서 수령할 경우(퇴근시간 이후 도착할 수 있음) / 도로명주소 사용시<br /> 
+				<font>　</font>·
+				수도권 외 지역에서 선물포장하기 주문을 할 경우
+			</p>
+
+		</div>
+		<div class="floating-box ">
+			<p>
+				<font>　</font><b>상품 총 금액|</b> 39,240원<font>　</font><b>주문상품수량|</b> 3종 3권
+			</p>
+			<p>
+				<font>　</font><b>배송비<font>　　　</font>|
+				</b>무료
+			</p>
+			<hr />
+			<p>
+				<font>　</font><b>주문합계|</b>39,240원<font>　</font><b>예상 적립통합포인트|</b>2,180원
+			</p>
+			<hr />
+			<p>
+				<font>　</font>도서 포함하여 만원 이상 구매 시 무료 배송안내<font>　</font>
+				<button type="button" onclick="alert('준비중입니다.')">안내</button>
+				<br /> <font>　</font><b>5만원 이상 실결제 시</b> 추가적립!<font>　</font>
+				<button type="button" onclick="alert('준비중입니다.')">안내</button>
+			</p>
+		</div>
+	</div>
+	<div class="float_left">
+		<font>　</font>쿠폰, 마일리지, 통합포인트 사용 시, 예상 적립 통합포인트가 변동될 수 있습니다. <br /> 
+		<font>　</font>쿠폰적용 제외 상품은 쿠폰적용 가능 주문금액에서 제외됩니다. <br /> 
+		<font>　</font>이미 갖고 있는 상품이 0종 있습니다.
+	</div>
+	<div class="float right">
+		<form>
+			<font>　　　　　　　　　　　　　　　　　　　</font><input type="button" name = "버튼" value="주문하기" onclick="location.href='order.html'";>
+			<input type="button" name="버튼" value="쇼핑 계속하기" onclick="location.href='../yeonwoo/book_list.html'";>
+			
+		</form>
+	</div>
+	
+	
+</div>
+</body>
+</html>
