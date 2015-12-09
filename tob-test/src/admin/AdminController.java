@@ -44,7 +44,7 @@ public class AdminController extends HttpServlet {
 		System.out.println("어드민컨트롤러 page : "+command.getPage());
 		switch (command.getPage()) {
 		case "Admin":
-			System.out.println("수민진짜입장");
+			System.out.println("이제시작인가");
 			break;
 		case "member_list": 
 			System.out.println("case: 회원목록 진입");
