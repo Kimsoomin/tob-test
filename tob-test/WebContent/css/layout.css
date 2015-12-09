@@ -1,0 +1,57 @@
+@CHARSET "UTF-8";
+
+CSS 레이아웃 4대 요소(Element)
+=== 1. display ===
+HTML 요소들의 라인개행을 담당. 숨기기 기능도 있음.
+System.out.println => block
+SYstem.out.print => inline
+set = "";		 => display : none;  ※remove는 아님.
+.hidden{
+	dsiplay: none !important;  !는 최우선으로 처리
+}
+.invisible{
+	visibility: hidden;
+}
+=== 2. margin ===
+외부 여백을 말함. 시계방향으로 상하좌우 여백 지정.
+margin-top => 10px
+margin-right => 20px
+margin-bottom => 30px
+margin-lef => 40px
+margin : 10px 20px 30px 40px => 상10 하20 좌30 우40px
+margin : 10px 30px => 상하10px 좌우 30px
+margin : 10px => 동서남북 10px
+
+=== 3. position ===
+포지션의 4대 프로퍼티 : static, relative, absolute, fixed
+http://aboooks.tistory.com/82 참조.
+static : 포지션의 기본 속성. 라인개형은 디폴트
+		 좌표와 무관하므로 top,left 속성값 적용x
+absolute : 기준점 x,y 좌표에 따라 포지션이 결정.
+		   부모DIV를 기준으로 좌표 적용. 없을 시 <body > 기준.
+		   다른 요소의 영향을 받지 않고 내장(벨트인)된 느낌
+fixed : 기준점 x,y 좌표에 따라 포지션 결정.
+		absolute와 다른점은 부모DIV가 존재하더라도, 무시하고 브라우저 기준.
+		주로, 네비게이션이나 고정된 헤더에 사용.
+relative : 브라우저가 아닌 부모DIV 기준(없다면 <body>) 포지션에 따라 바뀜.
+		   static과 다른점은 x,y 좌표가 적용.
+		   주로, absolute의 부모DIV로 사용됨.
+
+※ z-index
+포지션을 여러개 중첩해서 사용하면 어떤 요소가 제일 위에 와야하나 정해야함.
+그래서 absolute, fixed는 z-index와 세트로 사용.
+z-index는 큰 숫자가 제일 위이고, 작은 숫자가 제일 아래.
+
+=== 4. float ===
+float 는 2가지 속성을 가짐. => left, right
+이때, float를 사용하면 한 줄에 연달아 사용 가능 => inline이 내부적으로 할당.
+float : left; 라는 속성을 주면 요소들이 줄바꿈 대신 왼쪽부터 정렬되어 붙음.
+한가지 더 clear는 float의 속성을 없앰 => block 속성으로 환원함.
+
+
+ * clear: both => 플로트 속성을 해제함.
+
+
+
+
+

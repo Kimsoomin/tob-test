@@ -1,0 +1,36 @@
+@CHARSET "UTF-8";
+#table_member td{text-align: center;}
+
+#menu {padding: 0;}
+
+#menu li {display: inline;}
+
+#menu li a {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px 4px 0 0;
+}
+<<<<<<< HEAD
+
+#menu li a:hover {background-color: orange;}
+
+header#mig_header,footer#mig_footer,section#mig_section,article#mig_article {
+    border:1px solid grey;
+    margin:5px;margin-bottom:15px;padding:8px;
+    background-color:white;
+}
+header#mig_header,footer#mig_footer {
+    color:white;background-color:#444;margin-bottom:5px;
+}
+section#mig_section {
+    background-color:#ddd;
+}
+nav#mig_nav ul  {
+    margin:0;padding:0;
+}
+nav#mig_nav ul li {
+    display:inline; margin:5px;
+}
+

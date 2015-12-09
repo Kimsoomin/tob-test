@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../css/common.css" />
+<style>
+table{border-collapse: collapse;}
+tr, th, td{border: 1px solid black;}
+th{background: silver;}
+table {font-size:14pt;}
+ input,textarea,form {font-size:16pt; font-family:"verdana, sans-serif";} 
+ a:link {text-decoration:none;}
+ body,td,select {color : #333333; font-family:"verdana, sans-serif"; font-size:14pt;}
+ 
+.auto{margin: auto;}
+.wrap {
+	border-width: 1px;
+	border: solid;
+	border-color: #868686;
+	clear: both;
+}
+.li {
+	float: left;
+}
+#menu {
+	padding: 0;
+}
+#menu li {
+	display: inline;
+}
+#menu li a {
+			background-color: #eeeeee;
+			color: black;
+			padding: 10px 10px;
+	border: 1px solid black;
+}
+#menu li a:hover {
+	background-color: #eeeeee;
+}
+ul {
+	text-align: center;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+.manager_header {
+	background-color: #eeeeee;
+	color: white;
+	text-align: center;
+	padding: 5px;
+}
+.manager_nav_top {
+	background-color: #ffffff;
+	color: black;
+	text-align: center;
+}
+.manager_footer {
+	background-color: #eeeeee;
+	color: black;
+	text-align: center;
+	width: 100%;
+	height: 60px;
+}
+.txt_size_18 a {
+	display: block;
+	width: 100px;
+	font-weight: bold;
+	color: black;
+	background-color: white;
+	text-align: center;
+	padding: 4px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+a:hover, a:active {
+	background-color: #eeeeee;
+}
+</style>
+</head>
+<body>
+	<div class="wrap" style="width: 1200px; height: 1200px">
+		<div style="width: 100%">
+			<div class="manager_header" style="font-size: 20px">
+				<h1>한빛 문고 헤더</h1>
+			</div>
+			<div style=" width: 100%; height: 50px">
+
+				<!-- nav_top 왼쪽 공백 -->
+				<div
+					style=" width: 12%; height: 100%; float: left">
+				</div>
+
+				<!-- nav_top 가운데 네비 -->
+				<div  class="txt_size_18" style=" width: 63%; height: 50px; float: left;">
+					<ul>
+						<li class="li"><a href="../view/main.html">관리자 메인</a></li>
+						<li class="li"><a href="#">회원관리</a></li>
+						<li class="li"><a href="../view/manager_employee.html">사내관리</a></li>
+						<li class="li"><a href="../view/manager_book.html">책관리</a></li>
+						<li class="li"><a href="#">주문관리</a></li>
+						<li class="li"><a href="#">게시판</a></li>
+						<li class="li"><a href="#">로그아웃</a></li>
+					</ul>
+				</div>
+				<!-- 오른쪽 검색 -->
+				<div
+					style=" width: 24%; height: 50px; float: right">
+
+					<form action="../index.html" method="GET" target="_blank">
+						search <input type="text" name="userid" placeholder="search"
+							style="width: 50%"> <input type="submit" value="검색">
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<!-- 밑에 전체 큰 부분  -->
+		<div style="width: 100%; height: 81%;">
+			<!-- 왼쪽 네비 -->
+		<div style="height: 100%; width: 200px; border: 1px solid black; float: left;">
+				<div>
+					<ul>
+						<li class="li">
+						<select style="width: 180px; padding: 3px; margin-left: 10px">
+								<option value="이름검색">상품관리</option>
+								<option value="phone검색">상단진열관리</option>
+								<option value="직급검색">등록상품조회</option>
+						</select></li>
+					</ul>
+					
+					<div style="height: 155px; width: 100%;">
+							</div>	
+					<div>
+						<ul
+							style="width: 100%; height: 60%; text-align: center; font-weight: bold;">
+							<li style="padding-top: 10px"><a href="#">상품관리</a></li>
+							<li style="padding-top: 10px"><a href="#">상단진열관리</a></li>
+							<li style="padding-top: 10px"><a href="#">등록상품조회</a></li>	
+							<li style="padding-top: 10px"><a href="#">사내관리자 공지사항</a></li>
+						</ul>
+					</div>
+					<div style="width: 100%; height: 50px;">
+					</div>
+					<div
+						style="width: 100%; height: 400px; font-weight: bold;">
+						<p style="text-align: center;">Quick 링크</p>
+						<div>
+							<ul>
+								<li><select style="width: 180px; padding: 3px">
+										<option value="분류검색">분류검색</option>
+										<option value="1검색">1검색</option>
+										<option value="2검색">2검색</option>
+										<option value="3검색">3검색</option>
+								</select></li>
+							</ul>
+						</div>
+						<div style="margin-top: 10px">
+							<ul>
+								<li><select style="width: 180px; padding: 3px">
+										<option value="서점 Quick 링크">서점 Quick 링크</option>
+										<option value="알라딘">알라딘</option>
+										<option value="인터파크">인터파크</option>
+										<option value="Yes24">Yes24</option>
+								</select></li>
+							</ul>
+						</div>
+						<div style="margin-top: 10px">
+							<ul>
+								<li><select style="width: 180px; padding: 3px">
+										<option value="은행인터넷뱅킹">은행인터넷뱅킹</option>
+										<option value="기업은행">기업은행</option>
+										<option value="국민은행">국민은행</option>
+										<option value="우리은행">우리은행</option>
+								</select></li>
+							</ul>
+						</div>
+						<div style="margin-top: 10px">
+							<ul>
+								<li><select style="width: 180px; padding: 3px">
+										<option value="출판관련사이트">"출판관련사이트"</option>
+										<option value="교학사">교학사</option>
+										<option value="진학사">진학사</option>
+										<option value="뉴라이트">뉴라이트</option>
+								</select></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 왼쪽 네비 끝  -->
+
+			<!-- 오른쪽 섹션 큰 것  -->
+			<div
+				style="width: 82%; height: 100%; border: 1px solid black; float: right">
+
+				<div style="width: 100%; height: 100%;">
+
+
+					<div>
+
+						<!-- 가운데 섹션 공백 -->
+						<div
+							style="height: 50px; width: 100%; float: right">
+						</div>
+
+						<!-- 섹션 콤보 박스 -->
+						<div style="width: 99%; height: 50px; padding: 3px; text-align: center;">
+							<select style="margin-left: 20px;width: 180px; padding: 3px">
+								<option value="책이름">책이름</option>
+								<option value="국내도서">국내도서</option>
+								<option value="외국도서">외국도서</option>
+							</select> <input type="text" name="userid" placeholder="search"> <input
+								type="submit" value="검색">
+						</div>
+
+						<!-- 가운데 섹션 공백2 -->
+						<div style="height: 50px; width: 100%;">
+						</div>
+
+						<!-- 상품등록 리스트 -->
+						<ul id="menu" style="width: 100%; height:50px;  font-weight: bold; padding-bottom:0px;">
+							<li style="float: left; padding-top:15px; margin-left: 100px;"><a href="#">단품등록</a></li>
+							<li style="float: left; padding-top:15px;"><a href="#">대량등록</a></li>
+							<li style="float: left; padding-top:15px;"><a href="#">사은품등록</a></li>
+						</ul>
+					</div>
+					<!-- 섹션 상품 등록 -->
+
+					<div style="width: 90%; height: 80%; border: 1px solid black; float: right; margin-right: 50px">
+
+							<form action="../index.html" method="GET" target="_blank" style="text-align: left; margin-left: 100px; font-size: 23px">
+								<input type="checkbox" name="도서" value="도서"> 도서
+								<input type="checkbox" name="음반" value="음반"> 음반 <input
+									type="checkbox" name="DVD" value="DVD"> DVD
+							</form>
+							
+						<table style="width: 90%; height: 85%; margin-top: 20px; margin-left:20px; font-weight: bold;">
+							<tr>
+								<th>분류</th>
+								<th>입력</th>
+							</tr>
+							<tr>
+								<td class="auto" style="text-align: center;">상품명</td>
+								<td><input style="margin-left: 10px;" type="text"
+									name="상품명" size="60"></td>
+							</tr>
+							<tr>
+								<td class="auto" style="text-align: center;">ISBN</td>
+								<td><input style="margin-left: 10px;" type="text"
+									name="ISBN" size="60"></td>
+							</tr>
+							<tr>
+								<td class="auto" style="text-align: center;">상품분류</td>
+
+								<td><select
+									style="width: 150px; float: left; margin-left: 10px">
+										<option value="국내도서">국내도서</option>
+										<option value="외국도서">외국도서</option>
+										<option value="eBook">eBook</option>
+
+								</select> <select style="width: 180px; float: left; margin-left: 10px">
+										<option value="유아">유아</option>
+										<option value="외국어">외국어</option>
+										<option value="여행취미">여행취미</option>
+										<option value="예술">예술</option>
+										<option value="기술과학건강">기술과학건강</option>
+										<option value="경영자기개발">경영자기개발</option>
+										<option value="경제">경제</option>
+										<option value="취업수험서">취업수험서</option>
+										<option value="인문역사문화">인문역사문화</option>
+										<option value="시에세이만화">시에세이만화</option>
+										<option value="잡지">잡지</option>
+								</select></td>
+
+							</tr>
+							<tr>
+								<td class="auto" style="text-align: center;">저자
+								(지은이)</td>
+								<td><input style="margin-left: 10px;" type="text"
+									name="저자(지은이)" size="60"></td>
+							</tr>
+							<tr>
+								<td class="auto" style="text-align: center;">출판사</td>
+								<td><input style="margin-left: 10px;" type="text"
+									name="출판사" size="60"></td>
+							</tr>
+							<tr>
+								<td class="auto" style="text-align: center;">정가</td>
+								<td><input style="margin-left: 10px;" type="text" 
+								name="정가" size="40">원</td>
+							</tr>
+							<tr>
+								<td class="auto" style="text-align: center;">발행일</td>
+								<td><input style="margin-left: 10px;" type="text" name="년도" size="15">년 
+								<input style="margin-left: 10px;" type="text" name="월" size="15">월 
+								<input style="margin-left: 10px;" type="text" name="일" size="15">일
+								</td>
+							</tr>
+						</table>
+						<input type="submit" value="등록"
+							style="margin-left: 370px; margin-top: 10px; width: 80px; height: 40px; font-weight: bold;">
+					</div>
+					<!-- 섹션 상품등록 끝 -->
+
+				</div>
+
+			</div>
+
+		</div>
+		<!-- 오른쪽 섹션 끝 -->
+		<div class="manager_footer">회사정보</div>
+	</div>
+
+</body>
+</html>

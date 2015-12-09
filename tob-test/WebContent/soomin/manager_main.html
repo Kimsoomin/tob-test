@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../css/common.css" />
+<style>
+table{border-collapse: collapse;}
+tr, th, td{border: 1px solid black;}
+th{background: silver;}
+table {font-size:14pt;}
+input,textarea,form {font-size:16pt; font-family:"verdana, sans-serif";} 
+a:link {text-decoration:none;}
+body,td,select {color : #333333; font-family:"verdana, sans-serif"; font-size:14pt;}
+.auto{margin: auto;}
+.wrap {
+	border-width: 1px;
+	border: solid;
+	border-color: #868686;
+	clear: both;
+}
+.li {
+	float: left;
+}
+#menu {
+	padding: 0;
+}
+#menu li {
+	display: inline;
+}
+#menu li a {
+			background-color: #eeeeee;
+			color: black;
+			padding: 10px 10px;
+	border: 1px solid black;
+}
+#menu li a:hover {
+	background-color: #eeeeee;
+}
+ul {
+	text-align: center;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+.manager_header {
+	background-color: #eeeeee;
+	color: white;
+	text-align: center;
+	padding: 5px;
+}
+.manager_nav_top {
+	background-color: #ffffff;
+	color: black;
+	text-align: center;
+}
+.manager_footer {
+	background-color: #eeeeee;
+	color: black;
+	text-align: center;
+	width: 100%;
+	height: 60px;
+}
+.txt_size_18 a {
+	display: block;
+	width: 100px;
+	font-weight: bold;
+	color: black;
+	background-color: white;
+	text-align: center;
+	padding: 4px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+a:hover, a:active {
+	background-color: #eeeeee;
+}
+.txt_size_18 a {
+	display: block;
+	width: 100px;
+	font-weight: bold;
+	color: black;
+	background-color: white;
+	text-align: center;
+	padding: 4px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+</style>
+</head>
+<body>
+	<div class="wrap" style="width: 1200px; height: 1200px">
+		<div style="width: 100%">
+			<div class="manager_header" style="font-size: 20px">
+				<h1>한빛 문고 헤더</h1>
+			</div>
+			<div class="manager_nav_top "
+				style=" width: 100%; height: 50px">
+
+				<!-- nav_top 왼쪽 공백 -->
+				<div style="width: 12%; height: 100%; float: left">
+				</div>
+
+				<!-- nav_top 가운데 네비 -->
+				<div class="txt_size_18"
+					style="width: 63%; height: 50px; float: left">
+					<ul>
+						<li class="li"><a href="../view/main.html">관리자 메인</a></li>
+						<li class="li"><a href="#">회원관리</a></li>
+						<li class="li"><a href="../view/manager_employee.html">사내관리</a></li>
+						<li class="li"><a href="../view/manager_book.html">책관리</a></li>
+						<li class="li"><a href="#">주문관리</a></li>
+						<li class="li"><a href="#">게시판</a></li>
+						<li class="li"><a href="#">로그아웃</a></li>
+					</ul>
+				</div>
+				<!-- 오른쪽 검색 -->
+				<div
+					style=" width: 24%; height: 50px; float: right">
+
+					<form action="../index.html" method="GET" target="_blank">
+						search <input type="text" name="userid" placeholder="search"
+							style="width: 50%"> <input type="submit" value="검색">
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<!-- 밑에 전체 큰 부분  -->
+		<div style="width: 100%; height: 81%; border: 1px solid black;">
+			<!-- 왼쪽 차트 -->
+			
+			<div style=" width: 54.5%; height: 100%; float: left;">
+			
+
+				<div style="width: 99%; height: 55%; font-size: 10px; text-align: center; margin-top: 10px">
+			<img src="chart.jpg" width="98%" height="90%"
+				border="1px solid black;" />
+				<h1 style="margin-top:0px; font-size: 22px;font-weight: bold;">방문현황</h1>
+				</div>
+				
+				
+			<div style="width:99%; height:40%; margin-top:10px; font-size: 10px; text-align: center; ">
+			<table class="auto" style="background: white; width: 90%; height: 90%">
+				<tr>
+					<th>게시판명</th>
+					<th>오늘게시글</th>
+					<th>답변</th>
+					<th>미답변</th>
+				</tr>
+				<tr>
+					<td style="text-align: center;">일대일문의</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+				</tr>
+				<tr>
+					<td style="text-align: center;">상품문의</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+				</tr>
+				<tr>
+					<td style="text-align: center;">상품후기</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+				</tr>
+			</table>
+			<h1  style="margin-top:5px; font-size: 22px;">게시판 현황 Today</h1>
+		</div>
+	</div>
+			<!-- 왼쪽 차트 끝 -->
+				
+			<!-- 오른쪽 섹션  -->
+			<div style="width: 44.5%; height: 100%; float: right">
+			
+			<!-- 오른쪽 위 -->
+				<div style="width: 99%; height: 24%;  font-size: 10px; text-align: center;">
+				<table class="auto" style="background: white; width: 90%; height: 80%; margin-top: 33px">
+				<tr>
+					<th></th>
+					<th>주문형황</th>
+					<th>입금</th>
+					<th>미입금</th>
+				</tr>
+				<tr>
+					<td style="text-align: center;">건</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+				</tr>
+				<tr>
+					<td style="text-align: center;">금액</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+				</tr>
+			</table>
+				<p style="margin-top:0px; font-size: 22px;font-weight: bold;">주문현황 today</p>
+				</div>	
+				
+				<!-- 오른쪽 중간  -->
+				
+				<div style="width: 99%; height: 40%;  font-size: 10px; text-align: center; margin-top: 33px">
+				<table class="auto" style="background: white; width: 90%; height: 90%; margin-top: 10px">
+				<tr>
+					<th></th>
+					<th colspan="2">주문</th>
+					<th colspan="2">결제</th>
+				</tr>
+				<tr>
+					<td style="text-align: center;">구분</td>
+					<td>건수</td>
+					<td>금액</td>
+					<td>건수</td>
+					<td>금액</td>
+				</tr>
+				<tr>
+					<td style="text-align: center;">today</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+				</tr>
+				<tr>
+					<td style="text-align: center;">11.06</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+				</tr>
+				<tr>
+					<td style="text-align: center;">11.05</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+				</tr>
+				<tr>
+					<td style="text-align: center;">11.04</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+				</tr>
+				<tr>
+					<td style="text-align: center;">11.03</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+				</tr>
+				<tr>
+					<td style="text-align: center;">11.02</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+			</table>
+			<p style="margin-top:0px; font-size: 22px;font-weight: bold;">최근 주문현황</p>
+				</div>
+				<!-- 오른쪽 아래 -->
+				<div style="width: 99%; height: 24%; font-size: 10px; text-align: center; margin-top: 33px">
+				<table class="auto" style="background: white; width: 90%; height: 80%; margin-top: 10px">
+				<tr>
+					<th>게시판명</th>
+					<th>오늘게시글</th>
+					<th>답변</th>
+					<th>미답변</th>
+				</tr>
+				<tr>
+					<td style="text-align: center;">일대일문의</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+				</tr>
+				<tr>
+					<td style="text-align: center;">상품문의</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+				</tr>
+				<tr>
+					<td style="text-align: center;">상품후기</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+				</tr>
+			</table>
+			<p style="margin-top:0px; font-size: 22px;font-weight: bold;">회원현황 today</p>
+				</div>
+				
+				
+			</div>
+			<!-- 오른쪽 섹션 끝 -->
+		</div>
+			<!-- 전체 섹션 끝 -->
+		<div class="manager_footer">회사정보</div>
+	</div>
+
+</body>
+</html>
