@@ -99,14 +99,14 @@ public class BookDAOImpl implements BookDAO{
 			
 			while (rs.next()) {
 
-				temp.setBookId(rs.getString("bookId"));
-				temp.setBookName(rs.getString("bookName"));
-				temp.setBookPrice(rs.getString("bookPrice"));
+				temp.setBookId(rs.getString("book_Id"));
+				temp.setBookName(rs.getString("book_Name"));
+				temp.setBookPrice(rs.getString("Price"));
 				temp.setWriter(rs.getString("writer"));
 				temp.setGrade(rs.getString("grade"));
-				temp.setStockSeq(rs.getString("stockSeq"));
-				temp.setOptionBook(rs.getString("optionBook"));
-				temp.setGenreId(rs.getString("genreId"));
+				temp.setStockSeq(rs.getString("stock_Seq"));
+				temp.setOptionBook(rs.getString("option_Book"));
+				temp.setGenreId(rs.getString("genre_Id"));
 				
 				
 			}
@@ -128,14 +128,14 @@ public class BookDAOImpl implements BookDAO{
 			
 			while (rs.next()) {
 				BookVO temp = new BookVO();
-				temp.setBookId(rs.getString("bookId"));
-				temp.setBookName(rs.getString("bookName"));
-				temp.setBookPrice(rs.getString("bookPrice"));
+				temp.setBookId(rs.getString("book_Id"));
+				temp.setBookName(rs.getString("book_Name"));
+				temp.setBookPrice(rs.getString("price"));
 				temp.setWriter(rs.getString("writer"));
 				temp.setGrade(rs.getString("grade"));
-				temp.setStockSeq(rs.getString("stockSeq"));
-				temp.setOptionBook(rs.getString("optionBook"));
-				temp.setGenreId(rs.getString("genreId"));
+				temp.setStockSeq(rs.getString("stock_Seq"));
+				temp.setOptionBook(rs.getString("option_Book"));
+				temp.setGenreId(rs.getString("genre_Id"));
 				
 				list.add(temp);
 			}
@@ -150,17 +150,13 @@ public class BookDAOImpl implements BookDAO{
 	public int update(BookVO o) { //책 정보 수정
 		int result = 0;
 		try {
-			String sql = "UPDATE BOOK SET BOOK_ID = ?, BOOK_NAME = ?, BOOK_PRICE = ?, WRITER = ?, GRADE = ?, STOCK_SEQ = ?, OPTION_BOOK = ? "
-					+ "where GENRE_ID = ?";
+			String sql = "UPDATE BOOK SET BOOK_NAME = ?, PRICE = ?"
+					+ "where BOOK_ID = ?";
 			pstmt = con.prepareStatement(sql);
-			pstmt.setString(1, o.getBookId());
-			pstmt.setString(2, o.getBookName());
-			pstmt.setString(3, o.getBookPrice());
-			pstmt.setString(4, o.getWriter());
-			pstmt.setString(5, o.getGrade());
-			pstmt.setString(6, o.getStockSeq());
-			pstmt.setString(7, o.getOptionBook());
-			pstmt.setString(8, o.getGenreId());
+			pstmt.setString(1, o.getBookName());
+			pstmt.setString(2, o.getBookPrice());
+			pstmt.setString(3, o.getBookId());
+
 			result = pstmt.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();

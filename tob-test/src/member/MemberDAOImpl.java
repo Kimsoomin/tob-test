@@ -32,6 +32,7 @@ public class MemberDAOImpl implements MemberDAO {
             .getConnection();
    }
    public List<MemberVO> selectAll() {
+	   System.out.println("다오진입");
       List<MemberVO> list = new ArrayList<MemberVO>();
       try {
          stmt = con.createStatement(); // 쿼리를 실행하는 객체
@@ -46,7 +47,7 @@ public class MemberDAOImpl implements MemberDAO {
             temp.setGender(rs.getString("gender"));
             temp.setEmail(rs.getString("email"));
             temp.setPhone(rs.getString("phone"));
-            temp.setGender(rs.getString("addr"));
+            temp.setAddr(rs.getString("addr"));
             list.add(temp);
          }
       } catch (SQLException e) {

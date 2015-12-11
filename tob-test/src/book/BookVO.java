@@ -10,7 +10,7 @@ public class BookVO implements Serializable{
 	private String bookPrice;	//가격
 	private String writer;		//지은이
 	private String grade;		// 평점
-	private String bookstock; 	//재고량
+	private String stockseq; 	//재고량
 	private String optionBook; 	//옵션
 	private String genreId; 	//장르
 
@@ -20,13 +20,13 @@ public class BookVO implements Serializable{
 	
 	
 	public BookVO(String bookId, String bookName, String bookPrice, String writer,
-			String grade, String optionBook, String genreId, String bookstock) {
+			String grade, String optionBook, String genreId, String bookstock, String stockseq) {
 		this.bookId = bookId;
 		this.bookName = bookName;
 		this.bookPrice = bookPrice;
 		this.writer = writer;
 		this.grade = grade;
-		this.bookstock = bookstock;
+		this.stockseq = stockseq;
 		this.optionBook = optionBook;
 		this.genreId = genreId;
 	}
@@ -60,7 +60,7 @@ public class BookVO implements Serializable{
 
 
 	public String getStockSeq() {
-		return bookstock;
+		return stockseq;
 	}
 
 
@@ -101,8 +101,8 @@ public class BookVO implements Serializable{
 
 
 
-	public void setStockSeq(String bookstock) {
-		this.bookstock = bookstock;
+	public void setStockSeq(String stockseq) {
+		this.stockseq = stockseq;
 	}
 
 
@@ -124,7 +124,7 @@ public class BookVO implements Serializable{
 	@Override
 	public String toString() {
 		return "BookVO [bookId=" + bookId + ", bookName=" + bookName + ", bookPrice=" + bookPrice + ", writer=" + writer
-				+ ", grade=" + grade + ", bookstock=" + bookstock + ", optionBook=" + optionBook
+				+ ", grade=" + grade + ", bookstock="  + ", optionBook=" + optionBook
 				+ ", genreId=" + genreId + "]";
 	}
 
