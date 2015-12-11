@@ -1,23 +1,25 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" >
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" >
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="${context}/css/common.css" /> 
 
-<div id="header"></div>
 
-<div class="list-group" id="main_left">
-  <a href="#" class="list-group-item active">
-    관리자 기능
-  </a>
-  <a href="#" class="list-group-item" id="admin_home">홈</a>
-  <a href="#" class="list-group-item" id="mgmt_member">회원관리</a>
-  <a href="#" class="list-group-item" id="mgmt_book">책관리</a>
-  <a href="#" class="list-group-item" id="search">이벤트관리</a>
+<div id="header" style="border: 1px solid black"></div>
+<div id="box">
+<div class="list-group" id="main_left" style="border: 1px solid black">
+    <h1>관리자 기능</h1>
+  <a href="#" class="list-group-item" id="admin_home">홈</a><br>
+  <a href="#" class="list-group-item" id="mgmt_member">회원관리</a><br>
+  <a href="#" class="list-group-item" id="mgmt_book">책관리</a><br>
 </div>
 
-<div id="main_right">
+<div id="main_right" style="border: 1px solid black">
 
 <div id="linechart_material"></div> 
 
 </div>
-
+</div>
 
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <script>
@@ -64,18 +66,21 @@ function drawChart() {
 } 
 
 $(function() {
-/* 	$('#header').load('${context}/admin.do?page=header'); */
+/*  	$('#header').load('${context}/admin/Admin.do?page=header'); */
 	$('#main_left').css("float","left").css('width','300px').css('text-align','center');
 	$('#main_right').css("float","left").css("margin-left","150px").css('width','50%');
 	$('#tab_member').css('width','100%');
-	
+
 	$('#mgmt_member').click(function() {
 		Admin.memberList("${context}");
 	});
 	$('#mgmt_book').click(function() {
 		Admin.bookList("${context}");
 	});
-
+	$('#admin_home').click(function() {
+		Admin.home();
+	});
+	
 });	
  $('#btn_admin_table').click(function() {
     $('#btn_admin_table').submit();
@@ -83,6 +88,10 @@ $(function() {
  
  
  var Admin = {
+	home : function() {
+			location.href ="${context}/admin/Admin.do";
+		},
+			
 	memberList : function(project) {
 		 $.getJSON('${context}/admin/Admin.do?page=member_list', function(data) {
 			 var arr = [];
@@ -106,18 +115,19 @@ $(function() {
 							Bom.popup(project,arr[index]);
 						});
 					});
-					$("#tab_member").css({
+					
+					$("#member_list").css({
 						"padding-top" : "50px",
-						"padding-left" : "150px",
+						"padding-left" : "0px",
 						"background":"white",
 						"height":"1000px"
 						});
-					$("#tab_member button").css({
+					$("#member_list button").css({
 						"border":"none",
 						"background":"none"
 						
 					});
-					$("#tab_member").css("width","90%");
+					$("#tab_member").css("width","100%");
 					$("#tab_member").add("#tab_member tr").add("#tab_member th").add("#tab_member td").css({
 						"border" : "1px solid black",
 						"border-collapse" : "collapse",
@@ -146,19 +156,19 @@ $(function() {
 							Bom2.popup(project,arr[index]);
 						});
 					});
-					$("#tab_book").css({
+					$("#book_list").css({
 						"padding-top" : "50px",
-						"padding-left" : "150px",
+						"padding-left" : "0px",
 						"background":"white",
 						"height":"1000px"
 						});
-					$("#tab_book button").css({
+					$("#book_list button").css({
 						"border":"none",
 						"background":"none"
 						
 					});
-					$("#tab_book").css("width","90%");
-					$("#tab_book").add("#tab_member tr").add("#tab_member th").add("#tab_member td").css({
+					$("#tab_book").css("width","100%");
+					$("#tab_book").add("#tab_book tr").add("#tab_book th").add("#tab_book td").css({
 						"border" : "1px solid black",
 						"border-collapse" : "collapse",
 						"text-align" : "center",
@@ -204,145 +214,6 @@ var Bom2 = {
 			}
 		};
 
-	  
- /* ======================================================================= */
- var Admin2 = {
-			 	home : function(project) {
-					$("#box").load(project + "/member/Member.do?page=admin_home");
-				},
-				member : function(project) {
-					 $.getJSON(project + '/admin/Admin.do?page=member_list', function(data) {
-						 var arr = [];
-						 var table = '<div id="member_list"><h1>회원목록</h1>'
-								+'<table id="tab_member"><tr><th>아이디</th><th>비밀번호</th>'
-								+'<th>이름</th><th>생년</th><th>성별</th>'
-								+'<th>전화번호</th><th>주소</th><th>이메일</th><th>등록일</th></th>';
-								$.each(data, function() {
-									arr.push(this.id);
-									table +='<tr><td><button id="' + this.id + '" href=#>'+this.id+'</button></td>'
-										+'<td>'+this.password+'</td>'
-										+'<td>'+this.name+'</td><td>'+this.birth+'</td>'
-										+'<td>'+this.gender+'</td><td>'+this.phone+'</td>'
-										+'<td>'+this.addr+'</td><td>'+this.email+'</td>'
-										+'<td>'+this.regdate+'</td></tr>'
-								});
-								table += '</table></div>';
-								$(table).appendTo($('#box').empty());
-								// 아이디별로 버튼 달기
-								$.each(data, function(index) {
-									$("#"+this.id).click(function() {
-										Bom.popup(project,arr[index]);
-									});
-								});
-								
-								// css 부분
-								$("#member_list").css({
-														"padding-top" : "50px",
-														"padding-left" : "150px",
-														"background":"white",
-														"height":"1000px"
-														});
-								$("#member_list button").css({
-									"border":"none",
-									"background":"none"
-									
-								});
-								$("#tab_member").css("width","90%");
-								$("#tab_member").add("#tab_member tr").add("#tab_member th").add("#tab_member td").css({
-									"border" : "1px solid black",
-									"border-collapse" : "collapse",
-									"text-align" : "center",
-								});
-					});
-				},
-				movie : function(project) {
-					 $.getJSON(project + '/admin/Admin.do?page=movie_list', function(data) {
-						 var arr = [];
-						 var table = '<div id="movie_list"><h1>영화목록</h1>'
-						 	 	   + '<table id="tab_movie"><tr><th>영화번호</th><th>영화이름</th>'
-						 	       + '<th>감독</th><th>배우</th><th>등급</th><th>런타임</th><th>가격</th>'
-						 	       + '<th>장르</th><th>개봉일</th><th>종료일</th><th>줄거리</th>'
-						 	       + '<th>스틸컷</th><th>트레일러</th></tr>';
-							 $.each(data, function() {
-								arr.push(this.filmNumber);
-								table +='<tr><td><button id="'+this.filmNumber+'">'+this.filmNumber+'</button</td><td>'+this.filmName+'</td>'
-									+'<td>'+this.director+'</td><td>'+this.actor+'</td>'
-									+'<td>'+this.rate+'</td><td>'+this.runtime+'</td>'
-									+'<td>'+this.price+'</td><td>'+this.genre+'</td>'
-									+'<td>'+this.releaseDate+'</td><td>'+this.endDate+'</td>'
-									+'<td>'+this.story+'</td><td><div>'+this.cut+'</div></td>'
-									+'<td><div>'+this.trailer+'</div></td></tr>'
-								});
-								table += '</table>';
-								$(table).appendTo($('#box').empty());
-								// 아이디별로 버튼 달기
-								$.each(data, function(index) {
-									$("#"+this.filmNumber).click(function() {
-										Bom2.popup(project,arr[index]);
-									});
-								});
-								$("#movie_list div").css({
-														"width":"150px",
-														"overflow":"auto"
-														});
-								$("#movie_list").css({
-									"padding-top" : "20px",
-									"padding-left" : "20px",
-									"padding-right" : "20px",
-									"background":"white",
-									"height":"1000px",
-									});
-								$("#movie_list button").css({
-									"background":"none",
-									"border":"none"
-								});
-								$("#tab_movie").css("width","100%");
-								$("#tab_movie tr").css({"border" : "1px solid black", "border-collapse" : "collapse", "text-align" : "center"});
-								$("#tab_movie th").css({"border" : "1px solid black", "border-collapse" : "collapse", "text-align" : "center"});
-								$("#tab_movie td").css({"border" : "1px solid black", "border-collapse" : "collapse", "text-align" : "center"});
-					});
-				}
-	 };
- 
- /*=======================================================================================================*/
- /*=======================================================================================================*/
- /*=======================================================================================================*/
- 	  /* var Bom = {
-		popup : function(project,id) {
-			var url = project + "/admin/Admin.do?";
-			var name = "팝업";
-			var style = "toolbar=no, status=no, directories=no, scrollbars=yes, location=no, resizable=no, border=0, menubar=no";
-			var param = "page=member_profile&id="+id;
-			var width = 400;
-			var height = 500;
-			var xpos = (screen.availWidth - width) / 2;
-			var ypos = (screen.availHeight - height) / 2;
-			style = style + ",top=" + ypos + ",left=" + xpos + ",width=" + width + ",height=" + height;
-			url = url + param;
-			window.open(url,"",style);
-			}
-		};
- */
- /*=======================================================================================================*/
- /*=======================================================================================================*/
- /*=======================================================================================================*/
-
-	/*  var Bom2 = {
-				popup : function(project,filmNumber) {
-					var url = project + "/admin/Admin.do?";
-					var name = "팝업";
-					var style = "toolbar=no, status=no, directories=no, scrollbars=yes, location=no, resizable=no, border=0, menubar=no";
-					var param = "page=movie_profile&filmNumber="+filmNumber;
-					var width = 400;
-					var height = 500;
-					var xpos = (screen.availWidth - width) / 2;
-					var ypos = (screen.availHeight - height) / 2;
-					style = style + ",top=" + ypos + ",left=" + xpos + ",width=" + width + ",height=" + height;
-					url = url + param;
-					window.open(url,"",style);
-					}
-				};
-  */
 </script>
 
 

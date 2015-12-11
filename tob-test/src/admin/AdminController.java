@@ -58,6 +58,7 @@ public class AdminController extends HttpServlet {
 		case "Admin":
 			System.out.println("이제시작인가");
 			break;
+		case "header": break;
 		case "member_list": 
 			System.out.println("case: 회원목록 진입");
 			memberlist = memberService.getList();
